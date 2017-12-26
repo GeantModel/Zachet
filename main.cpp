@@ -8,8 +8,9 @@ using namespace std;
 const double u=0;
 const double g=10;
 class Norm{
-private: double x;
-    double F;
+private:
+    double x;
+double F;
 public:
     Norm(double x) : x(x) {}
     double getX()  {
@@ -19,6 +20,8 @@ public:
         return (exp(-(x-u)*(x-u)/(2*g*g)))/(g*sqrt(2*3.14));
     }
 };
+
+
 template <class T>
 void Vivod(vector<T> AA){
     for(int i=0; i<AA.size(); i++){
@@ -52,7 +55,6 @@ int main() {
     map<double,double > map1;
     for (double i=0; i<M.size(); i++) {
         map1.emplace(M[i], X[i]);
-        cout <<"   "<<sum1 << endl;
     }
     cout<<endl;
 
@@ -76,7 +78,7 @@ int main() {
         Sum += POINTS[i];
     }
     double mean = Sum/POINTS.size();
-    cout << mean << endl;
+
 
     double var;
     for (double i=0; i<POINTS.size(); i++) {
